@@ -30,6 +30,7 @@ public class SMXCrashlytics extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void logException(String value) {
+        Log.e("RNFabric:", "<<>> : " + value);
         Crashlytics.logException(new RuntimeException(value));
     }
 
